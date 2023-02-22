@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Information Visualization 2023</title>
+    <style>
+      body {
+        background: linear-gradient(to bottom right, #FF8C00, #FFA500, #444444, #87CEEB);
+      }
+      h1 {
+        font-size: 48px;
+        color: white;
+        text-align: center;
+        margin-top: 100px;
+      }
+      #work-in-progress {
+        font-size: 36px;
+        color: white;
+        text-align: center;
+        margin-top: 50px;
+      }
+      #gear-icon {
+        display: block;
+        margin: 0 auto;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 5px solid rgba(255, 255, 255, 0.2);
+        border-top-color: white;
+        animation: rotate 1s linear infinite;
+      }
+      @keyframes rotate {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Information Visualization 2023</h1>
+    <div id="work-in-progress">
+      <span>Work In Progress</span>
+      <span id="gear-icon"></span>
+    </div>
+  </body>
+</html>
