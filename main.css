@@ -1,0 +1,41 @@
+body {
+    padding: 0;
+    /* background: linear-gradient(to bottom right, #d45516, #ff9500, #79961e, #2e6356); */
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+  }
+  h1 {
+    font-size: 48px;
+    color: white;
+    text-align: center;
+    margin-top: 100px;
+  }
+  #work-in-progress {
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+  }
+  #gear-icon {
+    display: block;
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    border-top-color: white;
+    animation: rotate 1s linear infinite;
+  }
+  @keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  #mapbox{
+    margin: 0px;
+    height: 80vh;
+    width: 35vw;
+    border: 1px solid black;
+  }
