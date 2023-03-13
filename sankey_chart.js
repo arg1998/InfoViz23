@@ -40,5 +40,5 @@ function shapeClicked(shape_prop, shape_color) {
 }
 
 function alertMaximumShapeSelected() {
-  alert("You can only select up to" + MAX_SHAPE_SELECTION + " municipalities");
+  alert("You can only select up to " + MAX_SHAPE_SELECTION + " municipalities");
 }
