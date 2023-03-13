@@ -18,5 +18,3 @@ source activate InfoVis23
 # Install packages with pip
 pip install openpyxl pandas fastapi uvicorn geopandas
 
-# Create the Apps/InfoVis23/ directories in the root
-mkdir -p $HOME/Apps/InfoVis23/
