@@ -26,7 +26,7 @@ $.ajax({
 
 function whenClicked(e) {
   var style = shapeClicked(e.target.feature.properties, e.target.options.color);
-  if(style != null) {
+  if (style != null) {
     e.target.setStyle(style);
   }
 }
