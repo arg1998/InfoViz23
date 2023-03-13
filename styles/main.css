@@ -1,0 +1,21 @@
+body {
+  padding: 0;
+  /* background: linear-gradient(to bottom right, #d45516, #ff9500, #79961e, #2e6356); */
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  border: 1px solid blue;
+  box-sizing: border-box;
+  margin: 0px;
+  height: 100vh;
+}
+
+
+#mapbox {
+  margin: 0px;
+  height: 80vh;
+  width: 35vw;
+  border: 1px solid black;
+}
+
+

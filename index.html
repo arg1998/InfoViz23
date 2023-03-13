@@ -3,12 +3,14 @@
 
 <head>
   <title>Information Visualization 2023</title>
-  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/leaflet.css" />
+
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-  <script src="map.js"></script>
+  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
@@ -18,64 +20,11 @@
     <span>Work In Progress</span>
     <span id="gear-icon"></span>
   </div> -->
-
+  
   <div id="mapbox"></div>
 
-  <script>
-    var map = L.map('mapbox').setView([54.517461284757104, -125.090299112331], 5);
-    L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}', {
-      // attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      subdomains: 'abcd',
-      maxZoom: 11,
-      minZoom: 5,
-      ext: 'png'
-    }).addTo(map);
-
-    map.setMaxBounds(map.getBounds());
-
-
-    // fetch data from json file using ajax 
-    var municpalities = [];
-    $.ajax({
-      url: "./Data/GeoJson/unicpalities_espg4326_filtered.json",
-      dataType: "json",
-      success: function (data) {
-        municpalities = data;
-        console.log("fetched geojson data");
-      },
-      async: false
-    });
-
-    var myStyle = {
-      "color": "#ff7800",
-      "weight": 1,
-      "opacity": 0.65
-    };
-
-
-    function whenClicked(e) {
-      // e = event
-      console.log(e);
-      // You can make your ajax call declaration here
-      //$.ajax(... 
-    }
-    function mouseOver(e) {
-      console.log(e.target.feature.properties.mun_name + "(" + e.target.feature.properties.mun_abb + ")");
-
-    }
-
-    function onEachFeature(feature, layer) {
-      //bind click
-      layer.on({
-        click: whenClicked,
-        mouseover: mouseOver
-      });
-    }
-    var geojsonLayer = new L.GeoJSON(municpalities, { style: myStyle, onEachFeature: onEachFeature });
-    geojsonLayer.addTo(map);
-
-
-  </script>
+  <script src="sankey_chart.js"></script>
+  <script src="leaflet_map.js"></script>
 </body>
 
 </html>
