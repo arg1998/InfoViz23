@@ -23,6 +23,3 @@ screen -d infovis23_session
 
 # Print "Server is up"
 echo "Server is up."
-
-# Exit the script
-exit 0
