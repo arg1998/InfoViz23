@@ -10,12 +10,126 @@ body {
   height: 100vh;
 }
 
+/* left container */
+#left-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  border: 1px solid red;
+  box-sizing: border-box;
+  margin: 0px;
+  height: 100%;
+  flex-basis: 30%;
+}
+#right-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  border: 1px solid green;
+  box-sizing: border-box;
+  margin: 0px;
+  height: 100%;
+  flex-basis: 70%;
+}
 
 #mapbox {
   margin: 0px;
-  height: 80vh;
-  width: 35vw;
-  border: 1px solid black;
+  height: 70vh;
+  /* width: 35vw; */
+  /* border: 1px solid black; */
 }
 
+
+/* Slider  */
+.radio-container {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.radio-group label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-group .radio-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background-color: #fff;
+  margin-bottom: 10px;
+  z-index: 10;
+}
+
+.radio-group input[type="radio"]:checked + .radio-button {
+  background-color: #F58023;
+  border: 2px dashed black;
+  color: #fff;
+}
+
+.radio-group input[type="radio"]:checked > .radio-year {
+  margin-top: 40px;
+}
+
+.radio-group .radio-year {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #000;
+}
+
+.radio-group::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: translateY(-50%);
+  background-color: #000;
+  z-index: -1;
+}
+
+.radio-group label:first-child::before {
+  display: none;
+}
+
+.radio-group .radio-button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 14%;
+  height: 2px;
+  transform: translateX(70%);
+  background-color: black;
+  z-index: 0;
+}
+
+.radio-group label:last-child .radio-button::after {
+  display: none;
+}
 

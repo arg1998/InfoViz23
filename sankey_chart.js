@@ -4,7 +4,7 @@ var shapes_selected = new Set();
 // we send these tokenized municipality names to the server
 var municipalities_selected = new Set();
 var num_shape_selected = 0;
-const YEARS = [2017, 2018, 2019, 2020, 2021];
+var selected_year = "2017";
 
 const default_feature_style = {
   fillColor: "#ff7800",
@@ -37,6 +37,10 @@ function shapeClicked(shape_prop, shape_color) {
     alertMaximumShapeSelected();
   }
   return null;
+}
+
+function handleYearChange(year) {
+  selected_year = year.value;
 }
 
 function alertMaximumShapeSelected() {

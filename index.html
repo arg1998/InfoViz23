@@ -10,18 +10,46 @@
     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-  
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <!-- <h1>Information Visualization 2023</h1>
-  <div id="work-in-progress">
-    <span>Work In Progress</span>
-    <span id="gear-icon"></span>
-  </div> -->
-  
-  <div id="mapbox"></div>
+  <div id="left-container">
+    <div id="mapbox"></div>
+    <div class="radio-container">
+      <div class="radio-group">
+        <label>
+          <input type="radio" name="year" value="2017" onchange="handleYearChange(this)" checked>
+          <div class="radio-button"></div>
+          <div class="radio-year">2017</div>
+        </label>
+        <label>
+          <input type="radio" name="year" value="2018" onchange="handleYearChange(this)">
+          <div class="radio-button"></div>
+          <div class="radio-year">2018</div>
+        </label>
+        <label>
+          <input type="radio" name="year" value="2019" onchange="handleYearChange(this)">
+          <div class="radio-button"></div>
+          <div class="radio-year">2019</div>
+        </label>
+        <label>
+          <input type="radio" name="year" value="2020" onchange="handleYearChange(this)">
+          <div class="radio-button"></div>
+          <div class="radio-year">2020</div>
+        </label>
+        <label>
+          <input type="radio" name="year" value="2021" onchange="handleYearChange(this)">
+          <div class="radio-button"></div>
+          <div class="radio-year">2021</div>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div id="right-container">
+    <div id="sankey"></div>
+  </div>
 
   <script src="sankey_chart.js"></script>
   <script src="leaflet_map.js"></script>
