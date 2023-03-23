@@ -11,7 +11,7 @@ fi
 screen -S infovis23_session -d -m
 
 # Attach to the `infovis23_session` session and run the `uvicorn` command
-screen -r infovis23_session -X stuff 'uvicorn server:app --reload --host 0.0.0.0'
+screen -r infovis23_session -X stuff 'uvicorn server:app --reload --host 0.0.0.0 --port 8085'
 
 # Detach from the `infovis23_session` session
 screen -d infovis23_session
