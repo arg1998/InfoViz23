@@ -54,7 +54,7 @@ function shapeClicked(shape_prop, shape_color) {
       fillColor: _color,
       color: _color,
       weight: 2,
-      fillOpacity: 0.9,
+      fillOpacity: 0.95,
     };
   } else {
     alertMaximumShapeSelected();
@@ -119,6 +119,7 @@ function updatePlot() {
 }
 
 function calculateNodeColors(){
+  // this method calculates the colors of the nodes in the sankey chart
  var _node_colors = [];
   var num_factors = selected_factors.length;
   var _shapes_selected = Array.from(shapes_selected);
@@ -139,24 +140,9 @@ function calculateNodeColors(){
     _mun_color = _shapes_selected[i].mun_color;
     _node_colors.push(_mun_color);
   }
-
-
-
-  // get fill colors of selected shapes
-  // for(var i = 0; i < num_municipalities; i++){
-  //   var _mun_color = _shapes_selected[i].mun_color;
-  //   _node_colors.push(_mun_color);
-  //   for(var j = 0; j < num_factors; j++){
-  //     var _factor_color = factor_colors[j];
-  //     _node_colors.push(_factor_color);
-  //   }
-  // }
   return _node_colors;
 }
 
-function calculateLinkColors(){
-
-}
 
 function updateSankeyChart(rows) {
   if (!sankey_loaded) {
@@ -174,7 +160,14 @@ function updateSankeyChart(rows) {
       height: 400,
       sankey: {
         node: {
-          colors: calculateNodeColors() 
+          colors: calculateNodeColors(),
+          nodePadding: 15,
+          width: 20,
+          label: {
+            fontSize: 16,
+            italic: true,
+            fontName: "Roboto"
+          }
         },
         link: {
           colorMode: 'gradient'
