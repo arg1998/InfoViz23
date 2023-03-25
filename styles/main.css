@@ -10,7 +10,8 @@ body {
   height: 100vh;
 }
 
-/* left container */
+/* ----------------------------------- Left Container -----------------------------------  */
+
 #left-container {
   display: flex;
   flex-direction: column;
@@ -131,5 +132,21 @@ body {
 
 .radio-group label:last-child .radio-button::after {
   display: none;
+}
+
+
+
+/* ----------------------------------- Right Container -----------------------------------  */
+
+#right-container {
+  padding: 20px 20px 0px 20px;
+}
+
+/* Sankey chart */
+#sankey {
+  margin: 0px;
+  height: 70vh;
+  width: 100%;
+  border: 2px solid plum;
 }
 
