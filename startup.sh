@@ -12,7 +12,7 @@ source $HOME/.bashrc
 # Create the InfoVis23 environment
 conda create -y --name InfoVis23
 
-# Activate the environment
+# Activate the environmentasdasd
 source activate InfoVis23
 
 # Install packages with pip
