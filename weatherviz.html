@@ -3,19 +3,35 @@
 
 <head>
     <title>411 Viz</title>
+    <link rel="stylesheet" href="styles/main.css" />
 
 </head>
 
 <body>
-    <p>TEST</p>
+    <label>
+        <input type="radio" name="year" value="north" onchange="handleRegionChange(this)" checked>
+        <div class="radio-button"></div>
+        <div class="radio-region">North</div>
+    </label>
+    
+    <label>
+        <input type="radio" name="year" value="mid" onchange="handleRegionChange(this)" checked>
+        <div class="radio-button"></div>
+        <div class="radio-region">Mid</div>
+    </label>
+
+    <label>
+        <input type="radio" name="year" value="south" onchange="handleRegionChange(this)" checked>
+        <div class="radio-button"></div>
+        <div class="radio-region">South</div>
+    </label>
 
     <div class="calviz"></div>
     <div class="calviz_legend"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script type="module" src="heatmap.js"></script>
-    </button>
+    <script  src="heatmap.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,16 @@
+,Year,Accident Type,crash_count,Total Vehicles Involved,location,year,accident_type
+0,2017,Casualty crash,13587,24436,south,2017,Casualty crash
+2,2018,Casualty crash,12677,22535,south,2018,Casualty crash
+4,2019,Casualty crash,10589,18820,south,2019,Casualty crash
+6,2020,Casualty crash,8321,14551,south,2020,Casualty crash
+8,2021,Casualty crash,9098,16123,south,2021,Casualty crash
+10,2017,Casualty crash,3114,5089,mid,2017,Casualty crash
+12,2018,Casualty crash,3053,4939,mid,2018,Casualty crash
+14,2019,Casualty crash,2434,3959,mid,2019,Casualty crash
+16,2020,Casualty crash,2186,3603,mid,2020,Casualty crash
+18,2021,Casualty crash,2397,3876,mid,2021,Casualty crash
+20,2017,Casualty crash,636,977,north,2017,Casualty crash
+22,2018,Casualty crash,635,1009,north,2018,Casualty crash
+24,2019,Casualty crash,414,657,north,2019,Casualty crash
+26,2020,Casualty crash,402,655,north,2020,Casualty crash
+28,2021,Casualty crash,439,680,north,2021,Casualty crash
