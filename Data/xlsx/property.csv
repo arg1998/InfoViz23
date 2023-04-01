@@ -1,0 +1,16 @@
+,Year,Accident Type,crash_count,Total Vehicles Involved,location,year,accident_type
+1,2017,Property damage only,19113,33930,south,2017,Property damage only
+3,2018,Property damage only,18094,32276,south,2018,Property damage only
+5,2019,Property damage only,11691,21114,south,2019,Property damage only
+7,2020,Property damage only,8956,16061,south,2020,Property damage only
+9,2021,Property damage only,9719,17726,south,2021,Property damage only
+11,2017,Property damage only,5050,8284,mid,2017,Property damage only
+13,2018,Property damage only,4629,7596,mid,2018,Property damage only
+15,2019,Property damage only,2942,4826,mid,2019,Property damage only
+17,2020,Property damage only,2483,4074,mid,2020,Property damage only
+19,2021,Property damage only,2609,4479,mid,2021,Property damage only
+21,2017,Property damage only,1208,1962,north,2017,Property damage only
+23,2018,Property damage only,1113,1806,north,2018,Property damage only
+25,2019,Property damage only,670,1094,north,2019,Property damage only
+27,2020,Property damage only,491,804,north,2020,Property damage only
+29,2021,Property damage only,469,785,north,2021,Property damage only
