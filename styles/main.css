@@ -160,17 +160,16 @@ align-items: start;
 }
 
 #weatherviztitle{
-    font-size:25px;
+    font-family: Arial, Helvetica, sans-serif;    font-size:25px;
     align-items: center;
     text-decoration: underline;
-    font-weight: bold;
 }
 
 #casvsproptitle{
+    font-family: Arial, Helvetica, sans-serif;
     font-size:25px;
     align-items: center;
     text-decoration: underline;
-    font-weight: bold;
 }
 
 
