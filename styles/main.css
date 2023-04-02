@@ -90,6 +90,7 @@ body {
   color: #000;
 }
 
+
 .radio-group::before {
   content: '';
   display: block;
@@ -122,8 +123,13 @@ body {
   display: none;
 }
 
+.radio-region {
+    font-size: 20px;
+}
 
-
+.radio-type {
+    font-size: 20px;
+}
 /* ----------------------------------- Right Container -----------------------------------  */
 #right-container {
   display: flex;
@@ -152,3 +158,6 @@ align-items: start;
   align-items: center;
   margin-top: 20px;
 }
+
+
+
