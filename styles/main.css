@@ -1,13 +1,10 @@
 body {
-  padding: 0;
-  /* background: linear-gradient(to bottom right, #d45516, #ff9500, #79961e, #2e6356); */
+
   display: flex;
-  flex-direction: row;
-  justify-content: left;
-  border: 1px solid blue;
-  box-sizing: border-box;
   margin: 0px;
-  height: 100vh;
+  position: relative;
+  min-height: 100vh;
+  padding-left: 30%;
 }
 
 /* ----------------------------------- Left Container -----------------------------------  */
@@ -18,26 +15,16 @@ body {
   justify-content: left;
   border: 1px solid red;
   box-sizing: border-box;
-  margin: 0px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30%;
   height: 100%;
-  flex-basis: 30%;
-}
-#right-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
-  border: 1px solid green;
-  box-sizing: border-box;
-  margin: 0px;
-  height: 100%;
-  flex-basis: 70%;
 }
 
 #mapbox {
   margin: 0px;
-  height: 70vh;
-  /* width: 35vw; */
-  /* border: 1px solid black; */
+  height: 60%;
 }
 
 
@@ -47,7 +34,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: #ffffff;
+  border: none;
+
 }
 
 .radio-group {
@@ -81,7 +70,6 @@ body {
   height: 20px;
   border-radius: 50%;
   border: 2px solid #000;
-  background-color: #fff;
   margin-bottom: 10px;
   z-index: 10;
 }
@@ -137,16 +125,30 @@ body {
 
 
 /* ----------------------------------- Right Container -----------------------------------  */
-
 #right-container {
+  display: flex;
+  flex-direction: column;
+align-items: start;
+  border: 1px solid green;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
   padding: 20px 20px 0px 20px;
 }
 
 /* Sankey chart */
 #sankey {
   margin: 0px;
+  min-height: 500px;
   height: 70vh;
   width: 100%;
-  border: 2px solid plum;
 }
 
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}

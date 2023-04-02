@@ -30,7 +30,7 @@ const default_feature_style = {
   fillOpacity: 0.3,
 };
 
-[]
+
 var mun_colors = ["#D81B1B", "#1ECEE5", "#FFC107", "#00334D", "#EC00FF"];
 var factor_colors = ['#a6cee3', '#b2df8a', '#fb9a99', '#fdbf6f', '#cab2d6', '#ffff99', '#1f78b4', '#33a02c'];
 
@@ -157,7 +157,7 @@ function updateSankeyChart(rows) {
   data.addRows(rows);
 
     var options = {
-      height: 400,
+      height: 500,
       sankey: {
         node: {
           colors: calculateNodeColors(),

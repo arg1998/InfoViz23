@@ -13,6 +13,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 
 <body>
@@ -21,27 +22,27 @@
     <div class="radio-container">
       <div class="radio-group">
         <label>
-          <input type="radio" name="year" value="2017" onchange="handleYearChange(this)" checked>
+          <input type="radio" name="sankey_year" value="2017" onchange="handleYearChange(this)" checked>
           <div class="radio-button"></div>
           <div class="radio-year">2017</div>
         </label>
         <label>
-          <input type="radio" name="year" value="2018" onchange="handleYearChange(this)">
+          <input type="radio" name="sankey_year" value="2018" onchange="handleYearChange(this)">
           <div class="radio-button"></div>
           <div class="radio-year">2018</div>
         </label>
         <label>
-          <input type="radio" name="year" value="2019" onchange="handleYearChange(this)">
+          <input type="radio" name="sankey_year" value="2019" onchange="handleYearChange(this)">
           <div class="radio-button"></div>
           <div class="radio-year">2019</div>
         </label>
         <label>
-          <input type="radio" name="year" value="2020" onchange="handleYearChange(this)">
+          <input type="radio" name="sankey_year" value="2020" onchange="handleYearChange(this)">
           <div class="radio-button"></div>
           <div class="radio-year">2020</div>
         </label>
         <label>
-          <input type="radio" name="year" value="2021" onchange="handleYearChange(this)">
+          <input type="radio" name="sankey_year" value="2021" onchange="handleYearChange(this)">
           <div class="radio-button"></div>
           <div class="radio-year">2021</div>
         </label>
@@ -50,12 +51,61 @@
   </div>
   <div id="right-container">
     <div id="sankey"></div>
-  </div>
+    <div id="weather">
+      <div class="options">
+        <label>
+          <input type="radio" name="year" value="north" onchange="handleRegionChange(this)" checked>
+          <div class="radio-button"></div>
+          <div class="radio-region">North</div>
+        </label>
 
-  <div id = "box-weather-chart">
+
+        <label>
+          <input type="radio" name="year" value="mid" onchange="handleRegionChange(this)">
+          <div class="radio-button"></div>
+          <div class="radio-region">Mid</div>
+        </label>
+
+        <label>
+          <input type="radio" name="year" value="south" onchange="handleRegionChange(this)">
+          <div class="radio-button"></div>
+          <div class="radio-region">South</div>
+        </label>
+        <div class="calviz_legend"></div>
+      </div>
+
+      <div class="calviz"></div>
+    </div>
+    <div id="casualty">
+      <div class="options">
+        <label>
+          <input type="radio" name="type" value="casualty" onchange="handleTypeChange(this)" checked>
+          <div class="radio-button"></div>
+          <div class="radio-type">Casualty</div>
+        </label>
+
+        <label>
+          <input type="radio" name="type" value="property" onchange="handleTypeChange(this)">
+          <div class="radio-button"></div>
+          <div class="radio-type">Property</div>
+        </label>
+        <div class="calviz_legend"></div>
+      </div>
+      <div class="casvspropviz" id="viz2id"></div>
+    </div>
   </div>
   <script src="sankey_chart.js"></script>
   <script src="leaflet_map.js"></script>
+  <script src="heatmap.js"></script>
+  <script src="casualtyprop.js"></script>
+
+  <script>
+    window.onload = function() {
+      handleRegionChange({value: "north"});
+      handleTypeChange({value: "casualty"});
+    }
+  </script>
+  
 </body>
 
 </html>

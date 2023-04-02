@@ -3,18 +3,18 @@ var myVars = ["January", "February", "March", "April", "May", "June", "July", "A
 var myGroups = ["2017", "2018", "2019", "2020", "2021"]
 
 
-var margin = { top: 30, right: 30, bottom: 30, left: 30 },
-    width = 1000 - margin.left - margin.right,
-    height = 600 - margin.top - margin.bottom;
+var heatmap_margin = { top: 30, right: 30, bottom: 30, left: 30 },
+    width = 800 - heatmap_margin.left - heatmap_margin.right,
+    height = 600 - heatmap_margin.top - heatmap_margin.bottom;
 
 
 svg = d3.select(".calviz")
     .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", width + heatmap_margin.left + heatmap_margin.right)
+    .attr("height", height + heatmap_margin.top + heatmap_margin.bottom)
     .append("g")
     .attr("transform",
-        "translate(" + margin.left + "," + margin.top + ")");
+        "translate(" + heatmap_margin.left + "," + heatmap_margin.top + ")");
 // Build X scales and axis:
 var x = d3.scaleBand()
     .range([0, width])
@@ -37,13 +37,6 @@ svg.append("g")
     .call(d3.axisLeft(y))
     .call(d3.axisLeft(y).tickSizeInner(0))
     .call(g => g.select(".domain").remove());
-
-window.onload = function () {
-    drawChart("../Data/xlsx/south_heatmap.csv");
-};
-
-console.log("ASDSD")
-
 
 
 function handleRegionChange(region) {
@@ -94,11 +87,9 @@ async function drawChart(location) {
 //Legend Stuff
 var svg_legend = d3.select(".calviz_legend")
     .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform",
-        "translate(" + 0 + "," + margin.top + ")");
+    .attr("width", 500)
+    .attr("height", 100)
+    .append("g");
 // append title
 svg_legend.append("text")
     .attr("class", "legendTitle")
