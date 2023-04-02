@@ -159,5 +159,18 @@ align-items: start;
   margin-top: 20px;
 }
 
+#weatherviztitle{
+    font-size:25px;
+    align-items: center;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#casvsproptitle{
+    font-size:25px;
+    align-items: center;
+    text-decoration: underline;
+    font-weight: bold;
+}
 
 
