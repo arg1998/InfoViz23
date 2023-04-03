@@ -34,20 +34,30 @@ def get_sankey_data(year, mun_tokens, factors):
     df = df[df['mun_token'].isin(mun_tokens)]
     
     # Get frequency of datapoints for each mun_token and factor combination
-    rows = []
+    data = {}
+    all_factors = {}
     for mun_token in mun_tokens:
+        data[mun_token] = {
+            "total_accidents": 0,
+            "factors": {}
+        }
         for factor in factors:
             freq = len(df[(df['mun_token'] == mun_token) & (df[factor] == 'Yes')])
-            rows.append([mun_token, factor, freq])
+            data[mun_token]["total_accidents"] += freq
+            data[mun_token]["factors"][factor] = freq
+            
     
-    for row in rows:
-        row[0] = convert_string(row[0])
-        row[1] = convert_string(row[1])
+    for factor in factors:
+        all_factors[factor] = 0
+        for mun_token in mun_tokens:
+            all_factors[factor] += data[mun_token]["factors"][factor]
+        
     
     # Transform into JSON object
     data = {
         "year": year,
-        "rows": rows
+        "data": data, 
+        "all_factors": all_factors
     }
     return data
 

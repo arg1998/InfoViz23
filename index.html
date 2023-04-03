@@ -18,7 +18,9 @@
 
 <body>
   <div id="left-container">
+    <p class="prompts">1. Select Up to 5 Municipalities on the map:</p>
     <div id="mapbox"></div>
+    <p class="prompts">2. Select a year:</p>
     <div class="radio-container">
       <div class="radio-group">
         <label>
@@ -48,9 +50,65 @@
         </label>
       </div>
     </div>
+    <p class="prompts">3. Select Up to 5 Contributing Factor:</p>
+    <div class="checkbox-group">
+      <label class="custom-checkbox">
+        <input type="checkbox" value="alcohol_involved" onclick="handleCheckboxClick(this)">
+        <span class="checkmark"></span>
+        Alcohol Involved
+      </label>
+      <label class="custom-checkbox">
+        <input type="checkbox" value="driver_inattentive" onclick="handleCheckboxClick(this)">
+        <span class="checkmark"></span>
+        Driver Inattentive
+      </label>
+      <label class="custom-checkbox">
+        <input type="checkbox" value="drug_involved" onclick="handleCheckboxClick(this)">
+        <span class="checkmark"></span>
+        Drug Involved
+      </label>
+      <label class="custom-checkbox">
+        <input type="checkbox" value="impaired_involved" onclick="handleCheckboxClick(this)">
+        <span class="checkmark"></span>
+        Impaired Involved
+      </label>
+      <label class="custom-checkbox">
+        <input type="checkbox" value="driving_too_fast" onclick="handleCheckboxClick(this)">
+        <span class="checkmark"></span>
+        Exceeding Speed Limit
+      </label>
+
+      <label class="custom-checkbox">
+        <input type="checkbox" value="distracted_involved" onclick="handleCheckboxClick(this)">
+        <span class="checkmark"></span>
+        Driver Distracted
+      </label>
+
+      <label class="custom-checkbox">
+        <input type="checkbox" value="fell_asleep" onclick="handleCheckboxClick(this)">
+        <span class="checkmark"></span>
+        Driver Fell Asleep
+      </label>
+
+      
+
+      
+    </div>
   </div>
   <div id="right-container">
+    <div class="sankeyTopLegend">
+      <div>
+          Municipalites (Number of accidents)
+      </div>
+
+      <div>
+        Contributing Factors (Number of accidents)
+    </div>
+
+    </div>
     <div id="sankey"></div>
+    <div id="sankeyBottomStat">
+    </div>
     <div id="weather">
       <div class="options">
         <label>
@@ -100,12 +158,12 @@
   <script src="casualtyprop.js"></script>
 
   <script>
-    window.onload = function() {
-      handleRegionChange({value: "north"});
-      handleTypeChange({value: "casualty"});
+    window.onload = function () {
+      handleRegionChange({ value: "north" });
+      handleTypeChange({ value: "casualty" });
     }
   </script>
-  
+
 </body>
 
 </html>

@@ -1,10 +1,10 @@
-var map = L.map("mapbox").setView([54.517461284757104, -125.090299112331], 5);
+var map = L.map("mapbox").setView([54.517461284757104, -125.090299112331], 4);
 L.tileLayer(
   "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}",
   {
     // attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     maxZoom: 11,
-    minZoom: 5,
+    minZoom: 4,
     ext: "png",
   }
 ).addTo(map);
