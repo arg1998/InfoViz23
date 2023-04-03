@@ -32,17 +32,12 @@ function handleTypeChange(type){
     else{
         file_location = "../Data/xlsx/casualty.csv"
     }
-
     drawCasualtyChart(file_location)
 }
 
 
 function drawCasualtyChart(file_location){
-
-
-   // d3.selectAll("svg > *").remove();
-
-
+    casualty_svg.selectAll("*").remove()
     // append the svg object to the body of the page
     d3.csv(file_location).then(function (data) {
         var sumstat = d3.group(data, d => d.location);
