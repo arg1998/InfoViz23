@@ -17,5 +17,5 @@ COPY ./Data /app/Data
 EXPOSE 8085
 
 # Start the server
-CMD ["uvicorn", "server:app", "--port", "8085", "--reload"]
+CMD ["uvicorn", "server:app", "--port", "8085", "--reload", "--app-dir" , "/app/server/"]
 
