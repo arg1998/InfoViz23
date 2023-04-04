@@ -17,6 +17,10 @@ var selected_municipalities = new Set();
 var num_shape_selected = 0;
 var selected_year = "2017";
 var selected_factors = new Set();
+const server_ip = "107.158.94.112" ;
+const server_port = "8085" ;
+const API_ENDPOINT = "http://" + server_ip + ":" + server_port + "/getAccidents";
+const DEV_API_ENDPOINT = "http://localhost:8000/getAccidents";
 
 const default_feature_style = {
   fillColor: "#ff7800",
@@ -97,7 +101,7 @@ function updatePlot() {
   }
 
   var settings = {
-    url: "http://127.0.0.1:8000/getAccidents",
+    url: API_ENDPOINT,
     method: "POST",
     timeout: 0,
     xhrFields: {
